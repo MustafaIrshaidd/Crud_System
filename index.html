@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    
+    <div class="crud_system my-5">
+        <div class="container">
+
+            <!-- Header -->
+
+            <div class="heading py-5 bg-light text-center">
+                <h1 class="crud">CRUD</h1>
+                <h1 class="system">System</h1>
+            </div>
+
+            <!-- Progress Bar -->
+
+            <div class="progress" role="progressbar" aria-label="Animated striped example bg-light" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress" style="width: 0%"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 py-4">
+
+                    <!-- Name input -->
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="">
+                        <div class="valid-feedback">
+                            You're Amazing
+                        </div>
+                        <div class="invalid-feedback">
+                            First letter [A-Z] & 2-20 letters [a-z]
+                        </div>
+                    </div>
+
+                    <!-- Email input -->
+
+                    <label for="email" class="form-label">Email</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3 w-100">
+                                <input type="text" class="form-control" id="email" placeholder="">
+                                <div class="valid-feedback">
+                                    Beautiful
+                                </div>
+                                <div class="invalid-feedback">
+                                    5-20 [a-z] & at least one digit [0-9]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle w-100" id="email_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">@hotmail.com</button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#" id="emailEXT" onclick="emailEXT()">@hotmail.com</a></li>
+                                  <li><a class="dropdown-item" href="#" id="gmailEXT" onclick="gmailEXT()">@gmail.com</a></li>
+                                  <li><a class="dropdown-item" href="#" id="outlookEXT" onclick="outlookEXT()">@outlook.com</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+
+                    <!-- Password Input -->
+
+                    <div class="mb-3">
+                        <label for="pass" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="pass" placeholder="">
+                        <div class="valid-feedback">
+                            Strong
+                        </div>
+                        <div class="invalid-feedback">
+                            Minimum eight characters, at least one [A-Z], one lowercase [a-z] & one [0-9]
+                        </div>
+                    </div>
+
+                    <!-- Student ID input -->
+
+                    <div class="mb-3">
+                        <label for="s_id" class="form-label">Student ID</label>
+                        <input type="text" class="form-control" id="s_id" placeholder="">
+                        <div class="valid-feedback">
+                            Unique
+                        </div>
+                        <div class="invalid-feedback">
+                            Only eight numbers and the first one should be '1'
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+
+                        <!-- ADD & UPDATE Button -->
+
+                        <div class="col-6">
+                            <button type="button" id="add" class="btn btn-info w-100">Add</button>
+                        </div>
+
+                        <!-- Clear Button -->
+
+                        <div class="col-6 ">
+                            <button type="button" id="clear" class="btn btn-light w-100">Clear</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-8 py-4">
+                    <div class="mb-3">
+
+                        <!-- Search Field -->
+
+                        <label for="search" class="form-label">Search for students</label>
+                        <input type="text" class="form-control" id="search" placeholder="Search" onkeyup="search_user()">
+
+                        <!-- Delete All Button -->
+
+                        <button type="button" id="delete_all" class="btn btn-danger my-4">Delete All</button>
+
+                        <!-- Information Table -->
+
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Student ID</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody id="table_data">
+
+                                <!-- Table Data JS -->
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/index.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    
+</body>
+</html>

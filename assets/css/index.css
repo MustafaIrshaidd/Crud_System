@@ -1,0 +1,76 @@
+/* Public */
+
+body{
+    background-color: rgba(61, 33, 33, 0.22);
+}
+
+.container{
+    width:80%;
+}
+
+
+/* Header */
+
+.crud_system .container .heading{
+   position :relative;
+   overflow: hidden;
+   height: 15vh;
+   
+}
+
+.crud_system .container .heading .crud{
+    position:absolute;
+    left:41%;
+    animation: slide1 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+.crud_system .container .heading .system{
+    position:absolute;
+    right:41%;
+    animation: slide2 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+@keyframes slide1 {
+    0%{
+        left:-30%;
+        
+        opacity: 0;
+    }
+    15%{
+        left:40%;
+        
+        opacity: 1;
+    }
+    100%{
+        left:40%;
+        
+    }
+}
+@keyframes slide2 {
+    0%{
+        right:-30%;  
+        
+        opacity: 0;
+    }
+    15%{
+        right:40%;
+        
+        opacity: 1;
+    }
+    100%{
+        right:40%;
+        
+    }
+}
+
+.progress{
+    border-radius: 0;
+}
+
+.progress-bar {
+    background-color: green !important;
+}
